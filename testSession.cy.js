@@ -223,7 +223,7 @@ describe('Form validation(Search by email)', () =>
 
 describe('Form validation(Delete)', () => 
 {
-  it('should fail searching with empty email and invalid email', () => 
+  it('should fail deleting with empty reg no', () => 
   {
     cy.visit('http://localhost:8080/login')
     cy.get('input[name=username]').type('admin')
