@@ -1,6 +1,6 @@
 describe('Login Test(user)', () => 
 {
-  it('should log in as user, succeed to browse secured index page, but fail to browse delete page', () => 
+  it('Logged in as user, succeeded to browse secured index page, but failed to browse delete page', () => 
   {
     cy.visit('http://localhost:8080/login')
     cy.get('input[name=username]').type('user')
@@ -21,7 +21,7 @@ describe('Login Test(user)', () =>
 
 describe('Login Test(admin)', () => 
 {
-  it('should log in as admin, succeed to browse secured index page and delete page', () => 
+  it('Logged in as admin, succeeded to browse secured index page and delete page', () => 
   {
     cy.visit('http://localhost:8080/login')
     cy.get('input[name=username]').type('admin')
@@ -40,7 +40,7 @@ describe('Login Test(admin)', () =>
 
 describe('Login Test(-ve)', () => 
 {
-  it('should log in as admin, succeed to browse secured index page and delete page', () => 
+  it('Logged in as admin, succeeded to browse secured index page and delete page', () => 
   {
     cy.visit('http://localhost:8080/login')
     cy.get('input[name=username]').type('invalid name')
@@ -54,7 +54,7 @@ describe('Login Test(-ve)', () =>
 
 describe('User functionality', () => 
 {
-  it('should log in as user, reserve, hold the availability, search by reg no and email', () => 
+  it('Logged in as user, reserved, held the availability, searched by reg no and email', () => 
   {
     cy.visit('http://localhost:8080/login')
     cy.get('input[name=username]').type('user')
@@ -113,7 +113,7 @@ describe('User functionality', () =>
 
 describe('Admin functionality', () => 
 {
-  it('should log in as admin, and delete the reservation', () => 
+  it('Logged in as admin, and delete the reservation', () => 
   {
     cy.visit('http://localhost:8080/login')
     cy.get('input[name=username]').type('admin')
@@ -133,7 +133,7 @@ describe('Admin functionality', () =>
 
 describe('Form validation(reserve)', () => 
 {
-  it('should fail registration with empty date and email', () => 
+  it('Failed registration with empty date and email', () => 
   {
     cy.visit('http://localhost:8080/login')
     cy.get('input[name=username]').type('user')
@@ -169,7 +169,7 @@ describe('Form validation(reserve)', () =>
 
 describe('Form validation(Search by reg no)', () => 
 {
-  it('should fail searching with empty reg no and invalid no', () => 
+  it('Failed searching with empty reg no and invalid no', () => 
   {
     cy.visit('http://localhost:8080/login')
     cy.get('input[name=username]').type('user')
@@ -198,7 +198,7 @@ describe('Form validation(Search by reg no)', () =>
 
 describe('Form validation(Search by email)', () => 
 {
-  it('should fail searching with empty email and invalid email', () => 
+  it('Failed searching with empty email and invalid email', () => 
   {
     cy.visit('http://localhost:8080/login')
     cy.get('input[name=username]').type('user')
@@ -223,7 +223,7 @@ describe('Form validation(Search by email)', () =>
 
 describe('Form validation(Delete)', () => 
 {
-  it('should fail deleting with empty reg no', () => 
+  it('Failed deleting with empty reg no', () => 
   {
     cy.visit('http://localhost:8080/login')
     cy.get('input[name=username]').type('admin')
